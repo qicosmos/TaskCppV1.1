@@ -15,7 +15,7 @@ namespace Cosmos
 		typedef R return_type;
 
 		template<typename F>
-		auto Then(F&& f)->Task<typename std::result_of<F(R)>::type(Args...)>
+		auto Then(F&& f)//->Task<typename std::result_of<F(R)>::type(Args...)>
 		{
 			typedef typename std::result_of<F(R)>::type ReturnType;
 			auto func = std::move(m_fn);
